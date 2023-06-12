@@ -1,0 +1,23 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    height: 900px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background: rgb(172, 105, 234) url('assets/image/bkgrimg.jpg') no-repeat center;
+    background-size: 100%;
+
+}
+
+.head {
+    text-align: center;
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+}
+
+.iconheart {
+    width: 20px;
+}

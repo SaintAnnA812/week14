@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Массив - Array Упорядоченная коллекция данных</title>
+</head>
+<style>
+  h1 {
+    font-size: 30px;
+    color: darkmagenta;
+  }
+
+  div {
+    color: white;
+    background-color: thistle;
+    width: 100px;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+</style>
+
+<body>
+  <h1>Массив - Array Упорядоченная коллекция данных</h1>
+
+
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+
+  <button>КНОПУЛЬКА</button>
+
+  <script>
+
+    // создание массива
+    let arr0 = 1
+    let arr = [];
+    // console.log(arr);
+    let arr2 = new Array();
+    // console.log(arr2);
+    let arr3 = Array.of(1, 2, 3, 'hello', 'hola', 'nihao')
+    // console.log(arr3);
+    let arr4 = Array(6).fill(1)
+    // console.log(arr4);
+
+    //проверка - это массив?
+    //console.log(Array.isArray(arr));//true
+    // console.log(Array.isArray(arr0));//false
+    // console.log(typeof (arr));
+
+    // какие массивы бывают
+    const arrString = ['alfa', 'beta', 'gamma', 'omega', 'tilda', 'figma']
+    const arrNumbers = [1, 2, 3, 4, 5, 6, 7]
+    const arrDifferentTypes = [NaN, '2', { 'number': 3 }, 4n, true, null, undefined]
+    //многомерный массив
+    const arrOfArray = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+    // console.log(arrOfArray[1][1]);
+
+    // Длина массива
+    // console.log(arrNumbers.length);
+    // console.log(arrString.length);
+    // console.log(arrNumbers.length = 0);
+    // очистить массив – это arr.length = 0;.
+
+    // Чтение
+    let firstLetter = arrString[0]
+    console.log(firstLetter);
+    // console.log(arrString[1]);
+    // console.log(arrString[10]);
+
+    // Запись
+    //console.log(arrString);
+    // console.log(arrString[5])// figma
+    // запись в ячейку с индексом 5:
+    arrString[5] = 'zeta'
+    //console.log(arrString[5])
+    // запись в ячейку с индексом 7:
+    arrString[7] = 'theta'
+    // console.log(arrString[7])
+    // console.log(arrString);
+    // console.log(arrString[6]);
+
+    //последний элемент массива
+    // console.log(arrString[arrString.length - 1]);
+    //короткий синтаксис (новиночка):
+    // console.log(arrString.at(-1));
+
+
+    // добавление элементов
+    const NAMES = ['Сережа', 'Лера', 'Ира', 'Костя', 'Алиса', 'Света']
+    // console.log(NAMES);
+
+    //NAMES.push('Ольга') //для добавления в конец массива
+    //NAMES.push('Ольга', 'Иван', 'Даша') //для множества элементов добавления в конец массива
+    //NAMES.unshift('Дима') //для добавления в начало массива.
+
+    // console.log(NAMES);
+
+    // удаление элементов
+    //NAMES.pop() //для удаления из конца массива
+    //NAMES.shift() //удаления из начала массива
+
+    // console.log(NAMES);
+
+    // поиск по массиву
+
+    const episodesPerSeasons = [10, 10, 10, 10, 10, 9, 7, 6]
+    // console.log(episodesPerSeasons);
+    //console.log(episodesPerSeasons.includes(8))
+    // false
+    // console.log(episodesPerSeasons.includes(6))
+    // true
+    // console.log(episodesPerSeasons.indexOf(14));
+    // -1
+    // console.log(episodesPerSeasons.indexOf(10));
+    // 0
+    // console.log(episodesPerSeasons.lastIndexOf(10));
+    //4
+
+
+    const arrNumOld = [0, 1, 2, 3, 4, 5, 6, 7]
+
+    // console.log(arrNumOld);
+    //console.log(arrNumOld.slice(2, 5)); //не изменяет массив, то есть нужно результат положить в новый массив
+    // console.log(arrNumOld);
+    // let arrNumNew = arrNumOld.slice(2, 5)
+    // console.log(arrNumOld.splice(2, 5, 777, 777)); //начиная с 2 удаляет 5 элементов и добавляет 777 и  изменяя массив
+    // console.log(arrNumOld);
+    // console.log(arrNumNew);
+
+
+    //сложение массивов
+    let frstArray = [18, 28, 38, 48, 58]
+    let scndArray = [61, 62, 63, 64, 65]
+    let arrConcat = []
+    // arrConcat = arrConcat.concat(frstArray, scndArray)
+    arrConcat = frstArray.concat(scndArray, frstArray)
+    // console.log(arrConcat);
+
+
+    // преобразование массива в строку
+    let arrStringNew = [123, 456, '678', 'kitty', 'doggy']
+    let newStringNew = arrStringNew.join(' ')
+    // let newStringNew = arrStringNew.join(', ')
+    // let newStringNew = arrStringNew.join('qqqq ')
+    // console.log(newStringNew);
+    // преобразование строку в массив
+    let arrNewFromString = newStringNew.split(' ')
+    // console.log(arrNewFromString);
+
+    // Развернуть массив
+    let arrToReverse = [1, 2, 3, 4]
+    // console.log(arrToReverse.reverse());
+
+    let arrString2 = 'Anna Vika Lyuba irina Lera'
+    // console.log(arrString2.split(' ').reverse().join(', '));
+
+    // Сортировка массива
+    let newNames = NAMES.sort()
+    //console.log(newNames);
+
+
+    let arrToSort = [1, 2, 3, 11, 12, 23, 24]
+    let arrSorted = arrToSort.sort()
+    // console.log(arrSorted);
+
+    //сортировка массива как мы её преставляем от маленького к большому
+
+    var numArray = [140000, 12, 104, 99, 120, 11, 9];
+    numArray.sort(function (a, b) {
+      // console.log(a);
+      // console.log(b);
+      return b - a;
+    });
+    // console.log(numArray);
+    /* Если a меньше b, вернётся отрицательное число.
+Это значит, что a должно расположиться в итоговом массиве
+раньше, b — позже. Например:
+
+Получили отрицательное число, значит a стоит раньше b */
+
+    // Преобразование массивов
+
+    // - `array.every(callback)` - возвращает `true`, если все элементы массива удовлетворяют условию, заданному в функции `callback`
+    let array1 = [1, 2, 3, 4, 5, 6, 7]
+
+    let array1new = array1.every((el) => el > 0)
+    // console.log(array1new);
+    // или
+    // console.log(array1.every((el) => el < 0));
+
+    // - `array.some(callback)` - возвращает `true`, если хотя бы один элемент массива удовлетворяет условию, заданному в функции `callback`
+    let array2 = [1, 2, 3, 4, 5, 6, 7]
+    let array2new = array2.some((el) => el > 3)
+    // console.log(array2new);
+
+    // - `array.filter(callback)` - возвращает новый массив, содержащий все элементы, удовлетворяющие условию, заданному в функции `callback`
+    let array3 = [1, 2, 3, 4, 5, 6, 7]
+
+    let array3new = array3.filter(el => el > 3);
+    console.log(array3new);
+
+    // filter + string in array
+
+    const languages = ["Java", "TypeScript", "C#", "JavaScript", "Julia"];
+
+    const jLanguages = languages.filter(function (language) {
+      return language.startsWith("J")
+    })
+    // console.log(jLanguages);
+
+    // - `array.map(callback)` - возвращает новый массив, содержащий результаты вызова функции `callback` для каждого элемента массива
+    let array4 = [1, 2, 3, 4, 5, 6, 7]
+
+    let array4new = array4.map(function (item) { //Берём каждый элемент массива
+      return item * 2; //умножаем каждый элемент на 2
+    });
+
+    //console.log(array4new); //[0, 1, 4, 9, 16]
+
+
+    // REDUCE & REDUCE RIGHT
+
+    // - `array.reduce(callback)` - применяет функцию `callback` к каждому элементу массива для вычисления одного значения, которое возвращается в качестве результата
+    let array5 = [2, 2, 2]
+    let array5new = array5.reduce((el) => {
+      return el ** 3
+    })
+    // console.log(array5new);
+
+    // - `array.reduceRight(callback)` - применяет функцию `callback` к каждому элементу массива, начиная с конца, для вычисления одного значения, которое возвращается в качестве результата
+    let array6 = [3, 2, 1]
+
+    let array6new = array6.reduceRight((el) => {
+      return el ** 3
+    })
+    // console.log(array6new);
+
+    //!!** forEach - перебор массива - итерация массива
+
+    let arrayForEach = ['yellow', 'pink', 'blue', 'red']
+    arrayForEach.forEach((color) => {
+      // console.log('light-' + color);
+    })
+
+    function colorDark(color) {
+      // console.log('dark-' + color);
+    }
+
+    arrayForEach.forEach(colorDark)
+
+
+    // ПРИМЕР.forEach С ПАРАМЕТРАМИ
+
+    //     Важно знать, какие параметры принимает колбэк. Всего их три:
+
+    // item — элемент массива в текущей итерации;
+    // index — индекс текущего элемента;
+    // arr — сам массив, который мы перебираем.
+    // Вернёмся к примеру с едой:
+
+    const food = ['🍔', '🍟', '🍦']
+    console.log(food);
+    food.forEach((item, index, arr) => {
+      // console.log('Текущий элемент ' + item)
+      // console.log('Его индекс ' + index)
+      // console.log('Исходный массив ' + arr)
+    })
+
+
+    // .forEach ДЛЯ ПЕРЕБОРА КОЛЛЕКЦИЙ ЭЛЕМЕНТОВ
+    const divCollection = document.querySelectorAll('div');
+    console.log(divCollection);
+
+    document.querySelector('button').addEventListener('click', () => {
+      divCollection.forEach((div) => {
+        div.innerHTML = 'Это див'
+        div.style.height = '100px'
+      })
+
+    })
+
+
+
+  </script>
+</body>
+
+</html>
